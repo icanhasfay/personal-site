@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Eric Fay — High-Tech CISO. Product, Cloud, GRC, and incident response. Metrics-driven, board-ready." />
+  <title>Eric Fay</title>
+
+  <style>
+    :root{
+      /* Warm, paper-like scheme */
+      --bg: #EAE9DF;
+      --text: #2c1810;
+      --muted: #4a4a4a;
+      --rule: #e4dccf;
+      --link: #0a58ca;       /* classic link blue */
+      --link-visited: #5a3fc0;
+    }
+
+    *{ box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font: 18px/1.7 ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    .wrap{
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 28px 18px 70px;
+    }
+
+    /* Top nav (simple, text-first) */
+    nav{
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 22px;
+    }
+    nav .brand{
+      font-weight: 700;
+      letter-spacing: .2px;
+      margin-bottom: 8px;
+    }
+    nav a{
+      color: var(--text);
+      text-decoration: none;
+      margin-right: 12px;
+      white-space: nowrap;
+    }
+    nav a:hover{ text-decoration: underline; }
+
+    a{ color: var(--link); text-decoration:none; }
+    a:hover{ text-decoration: underline; }
+    a:visited{ color: var(--link-visited); }
+
+    /* Two-column layout: content + link column */
+    .layout{
+      display:grid;
+      grid-template-columns: minmax(0, 1fr) 260px;
+      gap: 36px;
+      align-items:start;
+    }
+
+    h1{
+      font-size: 40px;
+      line-height: 1.15;
+      margin: 0 0 10px;
+      font-weight: 700;
+    }
+    .lede{
+      font-size: 20px;
+      color: var(--muted);
+      margin: 0 0 18px;
+    }
+
+    .rule{ border:0; border-top:1px solid var(--rule); margin: 22px 0; }
+
+    h2{
+      font-size: 18px;
+      margin: 0 0 6px;
+      font-weight: 700;
+    }
+
+    p{ margin: 0 0 14px; }
+    ul{ margin: 0 0 14px 22px; padding:0; }
+    li{ margin: 6px 0; }
+
+    /* Right column of links (vertical list) */
+    .sidebar{
+      position: sticky;
+      top: 18px;
+      padding-top: 4px;
+    }
+    .side-title{
+      font-size: 14px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 2px 0 10px;
+    }
+    .side-list{
+      list-style:none;
+      padding:0;
+      margin:0 0 18px;
+      border-left: 2px solid var(--rule);
+      padding-left: 14px;
+    }
+    .side-list li{
+      margin: 8px 0;
+      line-height: 1.3;
+    }
+    .side-list a{
+      color: var(--text);
+      text-decoration:none;
+    }
+    .side-list a:hover{ text-decoration: underline; }
+
+    .fineprint{
+      margin-top: 28px;
+      padding-top: 14px;
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* Mobile: stack links under content */
+    @media (max-width:900px){
+      .layout{ grid-template-columns: 1fr; gap: 20px; }
+      .sidebar{ position: static; border-top: 1px solid var(--rule); padding-top: 16px; }
+    }
+    @media (max-width:640px){
+      body{ font-size: 17px; }
+      h1{ font-size: 34px; }
+      .lede{ font-size: 18px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <nav>
+      <div class="brand">Eric Fay</div>
+      <a href="#home">home</a>
+      <a href="#focus">focus</a>
+      <a href="#approach">approach</a>
+      <a href="#highlights">highlights</a>
+      <a href="#connect">connect</a>
+    </nav>
+
+    <div class="layout" id="home">
+      <!-- MAIN COLUMN -->
+      <main>
+        <p class="lede">
+          <strong>Eric Fay</strong> is an accomplished <strong>security executive</strong> with a track record of
+          <strong>building and scaling high performing security organizations</strong> for fast moving,
+          product led businesses. He brings deep experience across product security, cloud and
+          infrastructure security, application security, and governance, risk, compliance, partnering
+          closely with engineering and product leaders to embed security into how software is designed,
+          built, and shipped. Eric is known for <strong>translating risk into clear business outcomes</strong>,
+          establishing pragmatic security programs and operating rhythms, and delivering measurable
+          improvements in security posture without slowing innovation.
+        </p>
+        <p class="lede">
+          He currently serves as <strong>Senior Director, Head of Information Security at Flatiron Health</strong>,
+          responsible for leading the company's security strategy and execution across Security Engineering,
+          Incident Detection and Response, Governance Risk & Compliance and Identity Access Management.
+          Previously, Eric held senior security leadership roles including
+          <strong>Head of Security Engineering, Corporate Services, at Amazon</strong>,
+          <strong>Director of Information Security at Carta</strong>,
+          <strong>Head of Information Security, Braintree &amp; Swift, at PayPal</strong>, and
+          <strong>Head of Application Security at Hulu</strong>, where he built teams, implemented
+          scalable controls, and partnered with engineering organizations at significant scale.
+        </p>
+        <p class="lede">
+          Across his career, Eric has consistently modernized security programs by prioritizing high
+          leverage controls, automating where possible, and aligning stakeholders around shared
+          metrics—helping organizations <strong>accelerate growth while protecting customers, employees,
+          and critical business systems</strong>.
+        </p>
+
+        <hr class="rule" />
+
+        <section id="focus">
+          <h2>What I focus on</h2>
+          <ul>
+            <li><b>Security strategy & operating model</b> aligned to business goals and risk appetite.</li>
+            <li><b>Secure SDLC / shift left</b> tooling and workflows engineers actually use.</li>
+            <li><b>Cloud & platform security</b> guardrails, identity, scalable governance.</li>
+            <li><b>Detection & response</b> with clear ownership, playbooks, feedback flywheels.</li>
+            <li><b>GRC & regulatory</b> execution for data sensitive environments (PHI/PII, PCI, privacy).</li>
+            <li><b>Metrics</b> that drive action (coverage, time to fix, reduction in blast radius).</li>
+          </ul>
+        </section>
+
+        <hr class="rule" />
+
+        <section id="approach">
+          <h2>How I work</h2>
+          <p>
+            I translate technical risk into business impact, then build durable systems around it: clear standards,
+            automation first controls, and accountability that supports shipping.
+          </p>
+          <ul>
+            <li><b>Simple frameworks</b> for prioritization and decision making.</li>
+            <li><b>Automation where it matters</b> to reduce toil and improve consistency.</li>
+            <li><b>Partnership with engineering</b> so security becomes part of how work gets done.</li>
+          </ul>
+        </section>
+
+        <hr class="rule" />
+
+        <section id="highlights">
+          <h2>Impact by the Numbers</h2>
+          <ul>
+            <li>Led security engineering across Amazon Corporate Services, covering software used by 1.5M+ employees, contingent workers, and candidates across 17,000+ applications.</li>
+            <li>Established Carta's product security program, protecting financial data for 20,000+ organizations covering $1T+ in equity value.</li>
+            <li>Protected $200B in annual transaction volume and 6 billion transactions annually across Braintree's payment processing platform.</li>
+            <li>Led the migration of Braintree's cryptographic tokenization service handling 2B+ annual requests from on-premise to a custom multi-region AWS CloudHSM solution.</li>
+            <li>Built and scaled Hulu's application security program, protecting PII for 36M+ subscribers across 100% of production applications.</li>
+          </ul>
+        </section>
+
+        <hr class="rule" />
+
+        <section id="talks">
+          <h2>Select Public talks</h2>
+          <ul>
+            <li><b>Scaling Application Security Programs</b> — OWASP SF, July 2018 &amp; Shellcon 2018</li>
+            <li><b>Securing Modern Applications at Web Scale</b> — Panel, Media Security Summit 2017</li>
+          </ul>
+        </section>
+
+        <hr class="rule" />
+
+        <div class="fineprint">
+          © <span id="y"></span> Eric Fay. All rights reserved.
+        </div>
+      </main>
+
+      <!-- RIGHT COLUMN (VERTICAL LINKS) -->
+      <aside class="sidebar" aria-label="Links">
+        <div class="side-title">Links</div>
+
+        <!-- This is the “column of links” on the main page, :contentReference[oaicite:1]{index=1} -->
+        <ul class="side-list">
+          <li><a href="https://www.linkedin.com/in/head-of-information-security/"rel="noreferrer" target="_blank">linkedin</a></li>
+          <li><a href="mailto:eric@ericfay.org" target="_blank" rel="noreferrer">consulting requests / intro</a></li>
+          <li><a href="mailto:eric@ericfay.org" target="_blank" rel="noreferrer">presentation engagements</a></li>
+          <li><a href="#highlights">impact highlights</a></li>
+          <li><a href="#focus">focus areas</a></li>
+          <li><a href="#talks">talks</a></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
