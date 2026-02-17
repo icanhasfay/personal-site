@@ -9,12 +9,11 @@
 
   <style>
     :root{
-      /* Warm, paper-like scheme */
       --bg: #EAE9DF;
       --text: #2c1810;
       --muted: #4a4a4a;
       --rule: #e4dccf;
-      --link: #0a58ca;       /* classic link blue */
+      --link: #0a58ca;
       --link-visited: #5a3fc0;
     }
 
@@ -35,7 +34,6 @@
       padding: 28px 18px 70px;
     }
 
-    /* Top nav (simple, text-first) */
     nav{
       padding-bottom: 14px;
       border-bottom: 1px solid var(--rule);
@@ -58,13 +56,41 @@
     a:hover{ text-decoration: underline; }
     a:visited{ color: var(--link-visited); }
 
-    /* Two-column layout: content + link column */
     .layout{
       display:grid;
       grid-template-columns: minmax(0, 1fr) 260px;
       gap: 36px;
       align-items:start;
     }
+
+    /* ── Profile photo (floated left) ── */
+    .profile-photo {
+      float: left;
+      margin: 4px 24px 16px 0;
+      flex-shrink: 0;
+    }
+    .profile-photo img,
+    .profile-photo .photo-placeholder {
+      display: block;
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 1px solid var(--rule);
+      background: var(--rule);
+    }
+    .profile-photo .photo-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px dashed var(--rule);
+      color: var(--muted);
+      font-size: 13px;
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      text-align: center;
+      padding: 8px;
+    }
+    .clearfix::after { content:""; display:table; clear:both; }
 
     h1{
       font-size: 40px;
@@ -90,7 +116,6 @@
     ul{ margin: 0 0 14px 22px; padding:0; }
     li{ margin: 6px 0; }
 
-    /* Right column of links (vertical list) */
     .sidebar{
       position: sticky;
       top: 18px;
@@ -128,7 +153,6 @@
       font-size: 14px;
     }
 
-    /* Mobile: stack links under content */
     @media (max-width:900px){
       .layout{ grid-template-columns: 1fr; gap: 20px; }
       .sidebar{ position: static; border-top: 1px solid var(--rule); padding-top: 16px; }
@@ -137,6 +161,9 @@
       body{ font-size: 17px; }
       h1{ font-size: 34px; }
       .lede{ font-size: 18px; }
+      .profile-photo { float: none; margin: 0 0 18px 0; }
+      .profile-photo img,
+      .profile-photo .photo-placeholder { width: 100%; height: 200px; }
     }
   </style>
 </head>
@@ -155,7 +182,9 @@
     <div class="layout" id="home">
       <!-- MAIN COLUMN -->
       <main>
-        <p class="lede">
+
+        <p class="lede clearfix">
+          <div class="profile-photo"><img src="eric-fay.jpeg" alt="Eric Fay" /></div>
           <strong>Eric Fay</strong> is an accomplished <strong>security executive</strong> with a track record of
           <strong>building and scaling high performing security organizations</strong> for fast moving,
           product led businesses. He brings deep experience across product security, cloud and
@@ -235,7 +264,6 @@
           </ul>
         </section>
 
-
         <div class="fineprint">
           © <span id="y"></span> Eric Fay. All rights reserved.
         </div>
@@ -244,10 +272,8 @@
       <!-- RIGHT COLUMN (VERTICAL LINKS) -->
       <aside class="sidebar" aria-label="Links" id="links">
         <div class="side-title">Links</div>
-
-        <!-- This is the “column of links” on the main page, :contentReference[oaicite:1]{index=1} -->
         <ul class="side-list">
-          <li><a href="https://www.linkedin.com/in/head-of-information-security/"rel="noreferrer" target="_blank">linkedin</a></li>
+          <li><a href="https://www.linkedin.com/in/head-of-information-security/" rel="noreferrer" target="_blank">linkedin</a></li>
           <li><a href="mailto:eric@ericfay.org" target="_blank" rel="noreferrer">consulting requests / intro</a></li>
           <li><a href="mailto:eric@ericfay.org" target="_blank" rel="noreferrer">presentation engagements</a></li>
           <li><a href="#highlights">impact highlights</a></li>
